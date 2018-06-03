@@ -1,18 +1,12 @@
 import {
-    getLettersMap,
+    lettersMap,
     Result,
     calculate,
 } from '../calculator';
 
 describe('Letters map', () => {
-    const letters = getLettersMap();
-
-    const countLetters = letters => {
-        return Object.keys(letters).length;
-    };
-
     it('Should contain 33 letters', function() {
-        expect(countLetters(letters)).toBe(33);
+        expect(lettersMap.size).toBe(33);
     });
 });
 
