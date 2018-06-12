@@ -8,7 +8,7 @@ export class LettersDisplayer extends PureComponent {
         const listItems = [];
 
         this.props.letters.forEach((number, letter) => {
-            listItems.push(<LettersDisplayerItem letter={letter} number={number}/>);
+            listItems.push(<LettersDisplayerItem key={letter} letter={letter} number={number}/>);
         });
 
         return(
