@@ -1,10 +1,13 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent } from "react";
+import "./LettersDisplayerItem.css";
 
 export class LettersDisplayerItem extends PureComponent {
-
-    render() {
-        return(
-            <li>{this.props.letter} : {this.props.number}</li>
-        );
-    }
+  render() {
+    return (
+      <li>
+        <span className="letter">{this.props.letter}</span>
+        <span className="number">{this.props.number}</span>
+      </li>
+    );
+  }
 }

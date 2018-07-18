@@ -1,25 +1,24 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, { Component } from "react";
 
-import './App.css';
-import {LettersDisplayer} from "./components/LettersDisplayer";
-import {UserInput} from "./components/UserInput";
-import {lettersMap} from './modules/cyrillicNumbers/calculator';
+import "./App.css";
+import { LettersDisplayer } from "./components/LettersDisplayer";
+import { UserInput } from "./components/UserInput";
+import { lettersMap } from "./modules/cyrillicNumbers/calculator";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+        <header className="header">
+          <h1 className="App-title">Letter/number</h1>
         </header>
 
-        <div className="App-intro">
-            <UserInput/>
-        </div>
-
-          <LettersDisplayer letters = {lettersMap}/>
+        <section className="calculator">
+          <UserInput placeholder="Enter the word" />
+          <div className="letters">
+            <LettersDisplayer letters={lettersMap} />
+          </div>
+        </section>
       </div>
     );
   }

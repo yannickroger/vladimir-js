@@ -1,0 +1,8 @@
+.letter {
+  font-weight: bold;
+}
+
+.number {
+  text-align: right;
+  margin-left: 0.5em;
+}
